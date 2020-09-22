@@ -1,5 +1,3 @@
-// This guide shows how to get ISO data from an image path: https://www.beyondjava.net/how-to-extract-exif-metadata-from-an-image
-
 function main() {
 	console.log("Let's begin running this mini app!");
 	var fs = require('fs'); // create file server object to access files
@@ -18,6 +16,8 @@ function getISOVals(fs, imageFiles) {
 	var isoVal = [];
 	for (var i = 0; i < imageFiles.length; i++) {
 		let imageName = process.cwd() + '/Photos_To_Review/' + imageFiles[i];
+
+		// This guide shows how to get ISO data from an image path: https://www.beyondjava.net/how-to-extract-exif-metadata-from-an-image
 		const buffer = fs.readFileSync(imageName);
 		const parser = exif.create(buffer);
 		const result = parser.parse();

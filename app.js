@@ -1,9 +1,9 @@
 function main() {
 	var fs = require('fs'); // create file server object to access files
 	var imageFiles = getImageFileNames(fs); // imageFiles in an array containing all of the images names
-
+	
 	var isoVal = getISOVals(fs, imageFiles); // this is an array we will make, we will store all of the ISO values in the same order the images are. Later we will sort both from highest to lowest!
-
+	
 	displayNames(imageFiles, isoVal); // now let's display the name based on the sorted order -- if two have the same ISO value show the first one in order, first
 }
 
